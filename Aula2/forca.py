@@ -3,7 +3,8 @@ def jogar():
     print("Bem-vindo ao Jogo da Forca")
     print("----------------------")
     
-    palavra_secreta = "Python"
+    palavra_secreta = "banana"
+    letras_acertadas = [ "_", "_", "_", "_", "_", "_"]
     
     enforcou = False
     acertou = False
@@ -11,13 +12,16 @@ def jogar():
     while(not enforcou and not acertou):
         
         chute = input("Digite uma letra: ")
+        chute = chute.strip()
 
         index = 0
         for letra in palavra_secreta:
-            if(chute == letra):
-                print(f"Encontrei a letra {letra} na posição {index}")
-        print("Jogando...")
-
+            if(chute.upper() == letra.upper()):
+                letras_acertadas[index] = letra
+            index = index + 1 
+            
+        print(letras_acertadas)
+        
     print("Fim do Jogo")
 
 if (__name__ == "__main__"):
