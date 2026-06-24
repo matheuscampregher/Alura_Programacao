@@ -9,7 +9,7 @@ def jogar():
 
     letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
     
-    print("letras_acertadas")
+    print(letras_acertadas)
 
     enforcou = False
     acertou = False
@@ -58,7 +58,7 @@ def carrega_palavra_secreta():
     return palavra_secreta
 
 def inicializa_letras_acertadas(palavra):
-    return [ "_" for letra in palavra]
+    return [ "_" for letra in palavra ]
 
 def pede_chute():
     chute = input("Digite uma letra: ")
@@ -70,7 +70,7 @@ def marcar_chute_correto(chute, letras_acertadas, palavra_secreta):
     for letra in palavra_secreta:
         if(chute == letra):
             letras_acertadas[index] = letra
-            index += 1 
+        index += 1 
 
 def imprime_mensagem_vencedor():
     print("Você ganhou!!")
